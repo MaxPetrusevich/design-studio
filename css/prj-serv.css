@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url('../main-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Левый блок, центральный блок, правый блок */
+    align-items: center;
+    position: relative; /* Добавляем позиционирование для содержимого */
+}
+
+.burger-menu {
+    display: none; /* По умолчанию скрываем бургер-меню */
+    position: absolute;
+    top: calc(100% + 10px); /* Позиционируем меню под хедером */
+    left: 0;
+    width: auto; /* Устанавливаем ширину меню автоматически */
+    max-width: 300px; /* Ограничиваем максимальную ширину, например, 300px */
+    background-color: rgba(51, 51, 51, 0.7); /* Полупрозрачный цвет фона */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-top: 2px solid white; /* Добавляем верхнюю границу */
+    overflow-wrap: break-word; /* Разрыв слов */
+}
+
+
+.nav-links ul,
+.auth-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a,
+.auth-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger-toggle {
+    display: none;
+}
+
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.auth-links {
+    display: grid; /* Размещаем элементы входа и регистрации в строку с помощью grid */
+    grid-template-columns: auto auto; /* Два столбца */
+    gap: 20px; /* Отступ между элементами */
+    justify-self: end; /* Выравниваем по правому краю */
+}
+
+.burger-menu ul {
+    padding: 10px 20px;
+}
+
+.burger-menu li {
+    margin-bottom: 10px; /* Отступы между пунктами меню */
+}
+
+.burger-menu li:last-child {
+    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
+}
+
+.burger-menu li a {
+    color: white;
+}
+
+.burger-toggle {
+    display: none; /* Скрываем чекбокс на мобильных устройствах */
+}
+
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white; /* Изменяем цвет иконки на белый */
+}
+
+.burger-toggle:checked ~ .burger-menu {
+    display: block; /* Показываем бургер-меню при активации чекбокса */
+}
+
+
+
+.burger-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu li {
+    margin-bottom: 10px; /* Отступы между пунктами меню */
+}
+
+.burger-menu li:last-child {
+    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
+}
+
+.burger-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Размер шрифта */
+}
+
+.burger-menu li a:hover {
+    color: #ccc; /* Изменение цвета при наведении */
+}
+
+@media only screen and (max-width: 768px) {
+    .burger-toggle {
+        display: block; /* Показываем чекбокс на мобильных устройствах */
+        position: absolute; /* Позиционируем чекбокс абсолютно */
+        top: 10px; /* Отступ от верха хедера */
+        right: 20px; /* Отступ от правого края хедера */
+        z-index: 9999; /* Устанавливаем высокий z-index для перекрытия других элементов */
+    }
+
+    .auth-links {
+        display: none; /* Скрываем элементы входа и регистрации на мобильных устройствах */
+    }
+
+    .burger-icon {
+        display: block; /* Показываем иконку бургер-меню на мобильных устройствах */
+    }
+
+    .burger-menu {
+        position: relative; /* Возвращаем позицию к относительной */
+    }
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 60px; /* Учитываем высоту футера */
+}
+
+
+.projects-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-service,
+.project-link {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center; /* Выравнивание по центру */
+    background-color: white; /* Фон в светлом тоне */
+}
+
+.project-link {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

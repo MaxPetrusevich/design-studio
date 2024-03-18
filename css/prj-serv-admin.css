@@ -1,0 +1,243 @@
+/* Стили для администраторской страницы */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url('main-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* Левый блок, центральный блок, правый блок */
+    align-items: center;
+    position: relative; /* Добавляем позиционирование для содержимого */
+}
+
+.burger-menu {
+    display: none; /* По умолчанию скрываем бургер-меню */
+    position: absolute;
+    top: calc(100% + 10px); /* Позиционируем меню под хедером */
+    left: 0;
+    width: auto; /* Устанавливаем ширину меню автоматически */
+    max-width: 300px; /* Ограничиваем максимальную ширину, например, 300px */
+    background-color: rgba(51, 51, 51, 0.7); /* Полупрозрачный цвет фона */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-top: 2px solid white; /* Добавляем верхнюю границу */
+    overflow-wrap: break-word; /* Разрыв слов */
+}
+
+
+.nav-links ul,
+.auth-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a,
+.auth-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger-toggle {
+    display: none;
+}
+
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.auth-links {
+    display: grid; /* Размещаем элементы входа и регистрации в строку с помощью grid */
+    grid-template-columns: auto auto; /* Два столбца */
+    gap: 20px; /* Отступ между элементами */
+    justify-self: end; /* Выравниваем по правому краю */
+}
+
+.burger-menu ul {
+    padding: 10px 20px;
+}
+
+.burger-menu li {
+    margin-bottom: 10px; /* Отступы между пунктами меню */
+}
+
+.burger-menu li:last-child {
+    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
+}
+
+.burger-menu li a {
+    color: white;
+}
+
+.burger-toggle {
+    display: none; /* Скрываем чекбокс на мобильных устройствах */
+}
+
+.burger-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white; /* Изменяем цвет иконки на белый */
+}
+
+.burger-toggle:checked ~ .burger-menu {
+    display: block; /* Показываем бургер-меню при активации чекбокса */
+}
+
+/* Стили для бургер-меню на администраторской странице */
+.burger-menu {
+    display: none; /* По умолчанию скрываем бургер-меню */
+    position: absolute;
+    top: calc(100% + 10px); /* Позиционируем меню под хедером */
+    left: 0;
+    width: auto; /* Устанавливаем ширину меню автоматически */
+    max-width: 300px; /* Ограничиваем максимальную ширину, например, 300px */
+    background-color: rgba(51, 51, 51, 0.7); /* Полупрозрачный цвет фона */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-top: 2px solid white; /* Добавляем верхнюю границу */
+    overflow-wrap: break-word; /* Разрыв слов */
+}
+
+.burger-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-menu li {
+    margin-bottom: 10px; /* Отступы между пунктами меню */
+}
+
+.burger-menu li:last-child {
+    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
+}
+
+.burger-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Размер шрифта */
+}
+
+.burger-menu li a:hover {
+    color: #ccc; /* Изменение цвета при наведении */
+}
+
+.burger-toggle:checked ~ .burger-menu {
+    display: block; /* Показываем бургер-меню при активации чекбокса */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+form button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 60px; /* Учитываем высоту футера */
+}
+/* Стили для администраторской страницы */
+
+/* Стили для кнопок */
+button {
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Стили для выпадающего списка */
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Стили для элементов выпадающего списка */
+option {
+    padding: 5px;
+    background-color: white;
+}
