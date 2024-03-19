@@ -32,8 +32,47 @@
     </ul>
   </nav>
 </header>
+<label for="modal-toggle" class="modal-button">Открыть прайс</label>
+
+<input type="checkbox" id="modal-toggle" class="modal-toggle">
+
+<div class="modal">
+  <div class="modal-content">
+    <h2>Прайс дизайн-студии</h2>
+    <table>
+      <tr>
+        <th>Услуга</th>
+        <th>Цена</th>
+      </tr>
+      <tr>
+        <td>Веб-дизайн</td>
+        <td>от $500</td>
+      </tr>
+      <tr>
+        <td>Графический дизайн</td>
+        <td>от $300</td>
+      </tr>
+      <tr>
+        <td>Архитектурное проектирование</td>
+        <td>от $1000</td>
+      </tr>
+      <tr>
+        <td>Логотипы и брендинг</td>
+        <td>от $200</td>
+      </tr>
+      <tr>
+        <td>Дизайн интерьера</td>
+        <td>от $700</td>
+      </tr>
+    </table>
+    <label for="modal-toggle" class="modal-button">Закрыть</label>
+  </div>
+</div>
+
 
 <main class="main">
+<main>
+
   <div class="background-image"></div>
   <h1>Новости</h1>
   <div class="news-grid">
@@ -48,7 +87,8 @@
     </div>
     <div >
       <h2>Новая коллекция мебели</h2>
-      <p>Представляем вашему вниманию новую коллекцию мебели в стиле минимализм. Приходите и выбирайте лучшее для вашего
+      <p>Представляем вашему вниманию новую коллекцию мебели в стиле минимализм. Приходите и выбирайте лучшее для
+        вашего
         интерьера!</p>
     </div>
     <div>
@@ -90,11 +130,17 @@
   <div class="news-grid" id="news">
   </div>
 
+
   <form id="news-form">
     <label for="news-title"></label><input type="text" id="news-title" placeholder="Заголовок">
     <label for="news-content"></label><textarea id="news-content" placeholder="Текст новости"></textarea>
     <button id="add-news" type="submit">Добавить новость</button>
   </form></main>
+    <input type="text" id="news-title" placeholder="Заголовок">
+    <textarea id="news-content" placeholder="Текст новости"></textarea>
+    <button type="submit">Добавить новость</button>
+  </form>
+</main>
 
 <footer>
   <p>&copy; 2024 Design Studio. All rights reserved.</p>

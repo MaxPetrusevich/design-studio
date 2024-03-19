@@ -130,16 +130,9 @@ header {
 
 @media only screen and (max-width: 768px) {
     .burger-toggle {
-        display: block; /* Показываем чекбокс на мобильных устройствах */
-        position: absolute; /* Позиционируем чекбокс абсолютно */
-        top: 10px; /* Отступ от верха хедера */
-        right: 20px; /* Отступ от правого края хедера */
-        z-index: 9999; /* Устанавливаем высокий z-index для перекрытия других элементов */
+        display: none; /* Показываем чекбокс на мобильных устройствах */
     }
 
-    .auth-links {
-        display: none; /* Скрываем элементы входа и регистрации на мобильных устройствах */
-    }
 
     .burger-icon {
         display: block; /* Показываем иконку бургер-меню на мобильных устройствах */
@@ -234,4 +227,64 @@ footer {
     border-radius: 5px;
     width: 30%;
     box-sizing: border-box;
+=======
+/* Скрыть чекбокс по умолчанию */
+#modal-toggle {
+    display: none;
+}
+
+/* Стилизация метки (кнопки) */
+.modal-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+/* Стилизация модального окна (блока) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    z-index: 9999; /* Выше всех остальных элементов */
+}
+
+/* Показать модальное окно при активации чекбокса */
+#modal-toggle:checked + .modal {
+    display: block;
+}
+
+/* Стилизация контента в модальном окне */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+/* Скрыть чекбокс */
+.modal-toggle {
+    display: none;
+}
+/* Отмена стилей main для модального окна */
+.modal #news-form,
+.modal .news-grid,
+.modal .news-item {
+    margin: 0;
+    padding: 0;
 }
