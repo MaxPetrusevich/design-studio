@@ -153,7 +153,9 @@ main {
     gap: 20px;
 }
 
-.news-item {
+.news-grid div {
+    display: inline-flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -193,6 +195,39 @@ footer {
     background-color: #555;
 }
 
+.btn {
+    background-color: #f30527;
+    border: none;
+    border-radius: 4px;
+    color: white; /
+    padding: 8px 6px;
+    font-size: 16px;
+    max-font-size: 20px;
+    max-width: fit-content;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #670c0c;
+}
+.main {
+    width: 100%;
+}
+.news-search-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.news-search-div input{
+    margin-right: 3%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 30%;
+    box-sizing: border-box;
+=======
 /* Скрыть чекбокс по умолчанию */
 #modal-toggle {
     display: none;

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design Studio</title>
   <link rel="stylesheet" href="css/main-style.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -68,59 +70,72 @@
 </div>
 
 
+<main class="main">
 <main>
 
   <div class="background-image"></div>
   <h1>Новости</h1>
   <div class="news-grid">
-    <div class="news-item">
+    <div>
       <h2>Открытие нового филиала</h2>
       <p>Мы рады сообщить, что открылся новый филиал нашей дизайн студии в центре города. Ждем вас на открытии!</p>
     </div>
-    <div class="news-item">
+    <div>
       <h2>Победа в конкурсе</h2>
       <p>Наш проект "Инновационный дизайн интерьера" победил в международном конкурсе "Лучший дизайн года". Благодарим
         всех за поддержку!</p>
     </div>
-    <div class="news-item">
+    <div >
       <h2>Новая коллекция мебели</h2>
       <p>Представляем вашему вниманию новую коллекцию мебели в стиле минимализм. Приходите и выбирайте лучшее для
         вашего
         интерьера!</p>
     </div>
-    <div class="news-item">
+    <div>
       <h2>Вакансии в дизайн студии</h2>
       <p>У нас открыты вакансии для талантливых дизайнеров и архитекторов. Присоединяйтесь к нашей команде!</p>
     </div>
-    <div class="news-item">
+    <div>
       <h2>Летние скидки на дизайн услуги</h2>
       <p>Только в июле и августе мы предлагаем специальные скидки на все дизайн услуги. Не упустите свой шанс создать
         идеальный интерьер!</p>
+
     </div>
-    <div class="news-item">
+    <div >
       <h2>Обновленный сайт</h2>
       <p>Мы обновили наш сайт, чтобы сделать ваше пребывание на нем еще более удобным и информативным. Приглашаем
         посетить!</p>
     </div>
-    <div class="news-item">
+    <div>
       <h2>Участие в выставке дизайна</h2>
       <p>Наша дизайн студия примет участие в выставке "Современный дизайн". Приходите, чтобы увидеть наши последние
         работы!</p>
     </div>
-    <div class="news-item">
+    <div>
       <h2>Новый каталог услуг</h2>
       <p>Представляем вашему вниманию новый каталог наших услуг. Теперь выбрать подходящий дизайн для вас стало еще
         проще!</p>
     </div>
-    <div class="news-item">
+    <div>
       <h2>Подписка на рассылку</h2>
       <p>Хотите быть в курсе всех наших новостей и акций? Подпишитесь на нашу рассылку и будьте в курсе всех
         событий!</p>
     </div>
   </div>
+  <div class="news-search-div">
+  <h1>Добавленные новости</h1>
+    <label for="news-search"></label><input id="news-search" type="text" placeholder="Поиск">
+  </div>
+
+  <div class="news-grid" id="news">
+  </div>
 
 
   <form id="news-form">
+    <label for="news-title"></label><input type="text" id="news-title" placeholder="Заголовок">
+    <label for="news-content"></label><textarea id="news-content" placeholder="Текст новости"></textarea>
+    <button id="add-news" type="submit">Добавить новость</button>
+  </form></main>
     <input type="text" id="news-title" placeholder="Заголовок">
     <textarea id="news-content" placeholder="Текст новости"></textarea>
     <button type="submit">Добавить новость</button>
@@ -130,7 +145,9 @@
 <footer>
   <p>&copy; 2024 Design Studio. All rights reserved.</p>
 </footer>
+<script src="js/add-news.js">
 
+</script>
 </body>
 </html>
 
