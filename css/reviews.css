@@ -23,23 +23,23 @@ header {
     background-color: #333;
     padding: 10px 20px;
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Левый блок, центральный блок, правый блок */
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    position: relative; /* Добавляем позиционирование для содержимого */
+    position: relative;
 }
 
 .burger-menu {
-    display: none; /* По умолчанию скрываем бургер-меню */
+    display: none;
     position: absolute;
-    top: calc(100% + 10px); /* Позиционируем меню под хедером */
+    top: calc(100% + 10px);
     left: 0;
-    width: auto; /* Устанавливаем ширину меню автоматически */
-    max-width: 300px; /* Ограничиваем максимальную ширину, например, 300px */
-    background-color: rgba(51, 51, 51, 0.7); /* Полупрозрачный цвет фона */
+    width: auto;
+    max-width: 300px;
+    background-color: rgba(51, 51, 51, 0.7);
     padding: 10px 20px;
     box-sizing: border-box;
-    border-top: 2px solid white; /* Добавляем верхнюю границу */
-    overflow-wrap: break-word; /* Разрыв слов */
+    border-top: 2px solid white;
+    overflow-wrap: break-word;
 }
 
 
@@ -66,10 +66,10 @@ header {
 }
 
 .auth-links {
-    display: grid; /* Размещаем элементы входа и регистрации в строку с помощью grid */
-    grid-template-columns: auto auto; /* Два столбца */
-    gap: 20px; /* Отступ между элементами */
-    justify-self: end; /* Выравниваем по правому краю */
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-self: end;
 }
 
 .burger-menu ul {
@@ -77,11 +77,11 @@ header {
 }
 
 .burger-menu li {
-    margin-bottom: 10px; /* Отступы между пунктами меню */
+    margin-bottom: 10px;
 }
 
 .burger-menu li:last-child {
-    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
+    margin-bottom: 0;
 }
 
 .burger-menu li a {
@@ -89,17 +89,17 @@ header {
 }
 
 .burger-toggle {
-    display: none; /* Скрываем чекбокс на мобильных устройствах */
+    display: none;
 }
 
 .burger-icon {
     font-size: 30px;
     cursor: pointer;
-    color: white; /* Изменяем цвет иконки на белый */
+    color: white;
 }
 
 .burger-toggle:checked ~ .burger-menu {
-    display: block; /* Показываем бургер-меню при активации чекбокса */
+    display: block;
 }
 
 
@@ -111,37 +111,37 @@ header {
 }
 
 .burger-menu li {
-    margin-bottom: 10px; /* Отступы между пунктами меню */
+    margin-bottom: 10px;
 }
 
 .burger-menu li:last-child {
-    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
+    margin-bottom: 0;
 }
 
 .burger-menu li a {
     color: white;
     text-decoration: none;
-    font-size: 18px; /* Размер шрифта */
+    font-size: 18px;
 }
 
 .burger-menu li a:hover {
-    color: #ccc; /* Изменение цвета при наведении */
+    color: #ccc;
 }
 
 @media only screen and (max-width: 768px) {
     .burger-toggle {
-        display: none; /* Показываем чекбокс на мобильных устройствах */
+        display: none;
     }
 
 
 
 
     .burger-icon {
-        display: block; /* Показываем иконку бургер-меню на мобильных устройствах */
+        display: block;
     }
 
     .burger-menu {
-        position: relative; /* Возвращаем позицию к относительной */
+        position: relative;
     }
 }
 
@@ -179,7 +179,6 @@ footer {
     padding: 10px 0;
 }
 
-/* Стили для формы */
 #review-form {
     margin-top: 20px;
 }

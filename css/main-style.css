@@ -21,88 +21,64 @@ body::before {
 
 header {
     background-color: #333;
-    padding: 10px 20px;
+    padding: 20px 20px;
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Левый блок, центральный блок, правый блок */
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    position: relative; /* Добавляем позиционирование для содержимого */
+    position: relative;
 }
 
 .burger-menu {
-    display: none; /* По умолчанию скрываем бургер-меню */
+    display: none;
     position: absolute;
-    top: calc(100% + 10px); /* Позиционируем меню под хедером */
+    top: calc(100% + 10px);
     left: 0;
-    width: auto; /* Устанавливаем ширину меню автоматически */
-    max-width: 300px; /* Ограничиваем максимальную ширину, например, 300px */
-    background-color: rgba(51, 51, 51, 0.7); /* Полупрозрачный цвет фона */
+    width: auto;
+    max-width: 300px;
+    background-color: rgba(51, 51, 51, 0.7);
     padding: 10px 20px;
     box-sizing: border-box;
-    border-top: 2px solid white; /* Добавляем верхнюю границу */
-    overflow-wrap: break-word; /* Разрыв слов */
+    border-top: 2px solid white;
+    overflow-wrap: break-word;
 }
 
 
-.nav-links ul,
-.auth-links ul {
+* Styles for large screens *
+.nav-large {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-large ul {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.nav-links li a,
-.auth-links a {
-    text-decoration: none;
-    color: white;
+.nav-large li {
+    margin-right: 20px;
 }
 
-.burger-toggle {
+.nav-large li:last-child {
+    margin-right: 0;
+}
+.burger-toggle{
+    display: none;
+}
+.nav-large li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.burger-menu {
     display: none;
 }
 
-.burger-icon {
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.auth-links {
-    display: grid; /* Размещаем элементы входа и регистрации в строку с помощью grid */
-    grid-template-columns: auto auto; /* Два столбца */
-    gap: 20px; /* Отступ между элементами */
-    justify-self: end; /* Выравниваем по правому краю */
-}
-
-.burger-menu ul {
-    padding: 10px 20px;
-}
-
-.burger-menu li {
-    margin-bottom: 10px; /* Отступы между пунктами меню */
-}
-
-.burger-menu li:last-child {
-    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
-}
-
-.burger-menu li a {
-    color: white;
-}
-
-.burger-toggle {
-    display: none; /* Скрываем чекбокс на мобильных устройствах */
-}
-
-.burger-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: white; /* Изменяем цвет иконки на белый */
-}
-
 .burger-toggle:checked ~ .burger-menu {
-    display: block; /* Показываем бургер-меню при активации чекбокса */
+    display: block;
 }
-
-
 
 .burger-menu ul {
     list-style-type: none;
@@ -111,37 +87,169 @@ header {
 }
 
 .burger-menu li {
-    margin-bottom: 10px; /* Отступы между пунктами меню */
+    margin-bottom: 10px;
 }
 
 .burger-menu li:last-child {
-    margin-bottom: 0; /* Убираем отступ у последнего пункта меню */
+    margin-bottom: 0;
 }
 
 .burger-menu li a {
     color: white;
     text-decoration: none;
-    font-size: 18px; /* Размер шрифта */
 }
 
-.burger-menu li a:hover {
-    color: #ccc; /* Изменение цвета при наведении */
+
+.auth-links {
+    display: flex;
+    justify-content: flex-end;
 }
+
+.auth-links ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.auth-links li {
+    margin-left: 20px;
+}
+
+.auth-links li:first-child {
+    margin-left: 0;
+}
+
+.auth-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .burger-icon {
+        display: none;
+    }
+    .burger-toggle{
+        display: none;
+    }
+    .burger-menu {
+        display: none;
+    }
+
+    .nav-large {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-large ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-large li {
+        margin-right: 20px;
+    }
+
+    .nav-large li:last-child {
+        margin-right: 0;
+    }
+
+    .nav-large li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .auth-links {
+        margin-left: auto;
+    }
+
+    .auth-links ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .auth-links li {
+        margin-left: 20px;
+    }
+
+    .auth-links li:first-child {
+        margin-left: 0;
+    }
+
+    .auth-links li a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
-    .burger-toggle {
-        display: none; /* Показываем чекбокс на мобильных устройствах */
+    .nav-large{
+        display: none;
     }
-
-
-    .burger-icon {
-        display: block; /* Показываем иконку бургер-меню на мобильных устройствах */
+    .burger-toggle{
+        display: none;
     }
-
     .burger-menu {
-        position: relative; /* Возвращаем позицию к относительной */
+        display: none;
+    }
+
+    .burger-toggle:checked ~ .burger-menu {
+        display: block;
+    }
+
+    .burger-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .burger-menu li {
+        margin-bottom: 10px;
+    }
+
+    .burger-menu li:last-child {
+        margin-bottom: 0;
+    }
+
+    .burger-menu li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .auth-links {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .auth-links ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .auth-links li {
+        margin-left: 20px;
+    }
+
+    .auth-links li:first-child {
+        margin-left: 0;
+    }
+
+    .auth-links li a {
+        color: white;
+        text-decoration: none;
     }
 }
+
+
 
 main {
     padding: 20px;
@@ -193,12 +301,11 @@ footer {
     background-color: #555;
 }
 
-/* Скрыть чекбокс по умолчанию */
+
 #modal-toggle {
     display: none;
 }
 
-/* Стилизация метки (кнопки) */
 .modal-button {
     display: inline-block;
     padding: 10px 20px;
@@ -213,7 +320,6 @@ footer {
     text-align: center;
 }
 
-/* Стилизация модального окна (блока) */
 .modal {
     display: none;
     position: fixed;
@@ -221,16 +327,14 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
-    z-index: 9999; /* Выше всех остальных элементов */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
 
-/* Показать модальное окно при активации чекбокса */
 #modal-toggle:checked + .modal {
     display: block;
 }
 
-/* Стилизация контента в модальном окне */
 .modal-content {
     position: absolute;
     top: 50%;
@@ -242,11 +346,9 @@ footer {
     max-width: 80%;
 }
 
-/* Скрыть чекбокс */
 .modal-toggle {
     display: none;
 }
-/* Отмена стилей main для модального окна */
 .modal #news-form,
 .modal .news-grid,
 .modal .news-item {
